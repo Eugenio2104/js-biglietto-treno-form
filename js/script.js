@@ -4,15 +4,14 @@ const inputEta = document.getElementById('inputEta')
 const prezzoAlKm = 0.21;
 const prezzoBiglietto = (inputKm * prezzoAlKm)
 let sconto = 0;
-let prezzoFinale = document.getElementById (`inputPrezzo`);
-let etaPasseggero = document.getElementById(`eta`)
+let prezzoFinale;
+let etaPasseggero = document.getElementById(`eta`);
 const bottoneGenera = document.getElementById('btn-input');
 
 bottoneGenera.addEventListener('click', function() {
   const nome = inputNome.value;
   const km = inputKm.value;
   const eta = inputEta.value; 
-  let prezzoFinale  = eta.value;
  // Parte Logica
 
   document.getElementById(`output-name`).innerHTML = nome
@@ -32,9 +31,7 @@ else if(etaPasseggero === `over65`){
 
 else(etaPasseggero === `maggiorenne`)
 
-document.getElementById(`inputPrezzo`).innerHTML = `
-${prezzoFinale}
-`; 
+document.getElementById(`prezzo-biglietto`).innerHTML = `${prezzoFinale}`
  
  // Parte di presentazione
 
